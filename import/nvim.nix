@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{  pkgs, ... }: {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -16,6 +16,12 @@
 		 require("lazy")
 		 require('lsp-zero')
 		 require('lspconfig').nixd.setup({})
+
+		 -- optionally enable 24-bit colour
+		vim.opt.termguicolors = true
+
+-- empty setup using defaults
+			require("nvim-tree").setup()
 		 
 		 local cmp = require'cmp'
 		 cmp.setup({
@@ -63,6 +69,7 @@
 		 Plug 'hrsh7th/cmp-vsnip'
 		 Plug 'hrsh7th/vim-vsnip'
 		 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+		Plug 'nvim-tree/nvim-tree.lua'
 
 		 set autoindent
 		 set noexpandtab
