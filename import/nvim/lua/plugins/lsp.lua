@@ -18,6 +18,9 @@ return {
     end)
 
     require("lazy-lsp").setup {
+			preferred_servers = {
+				nix = { "nixd" },
+			},
 			configs = {
     lua_ls = {
       settings = {

@@ -16,5 +16,6 @@
 	home.file.".config/nvim" = {
 		source = ./nvim;
 		recursive = true;
+		onChange = "chown nakajima:nakajima .config/nvim";
 	};
 }
