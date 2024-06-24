@@ -9,3 +9,4 @@ vim.cmd([[
 	set shiftwidth=2
 ]])
 
+vim.cmd("map <S-Esc> :NvimTreeFocus <CR>")
