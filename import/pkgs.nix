@@ -7,5 +7,7 @@
     pkgs.clang
     pkgs.nixd
     pkgs.nixfmt-rfc-style
+		pkgs.nodejs
+		pkgs.tree-sitter
   ];
 }
