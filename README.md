@@ -1,5 +1,7 @@
 # my home-manager
 
+i have bailed on this.
+
 ## Setup
 
 Probably want to install zsh first, since the nix one is weird (??).
