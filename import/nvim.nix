@@ -1,5 +1,6 @@
 {  pkgs, config, ... }: {
   programs.neovim = {
+		package = pkgs.neovim-unwrapped;
     enable = true;
     defaultEditor = true;
     viAlias = true;
@@ -13,8 +14,12 @@
     ];
 	};
 
-	home.file.".config/nvim" = {
-		source = ./nvim;
-		recursive = true;
-	};
+	xdg.configFile = {
+    nvim = {
+      source =
+        config.lib.file.mkOutOfStoreSymlink
+          "${config.home.homeDirectory}/.config/home-manager/import/nvim";
+      recursive = true;
+    };
+  };
 }
